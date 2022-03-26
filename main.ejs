@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d:dictionary xmlns="http://www.w3.org/1999/xhtml" xmlns:d="http://www.apple.com/DTDs/DictionaryService-1.0.rng">
+<% allArticles.forEach(article => { %>
+    <d:entry id="<%= article.id %>" d:title="<%= article.title %>">
+        <% article.index.forEach(i => { %>
+            <d:index d:value="<%= i %>"/>
+        <% }) %>
+        <h1><%= article.title %></h1>
+        <div id="content"><%- article.desc %>
+        <p><a href="https://www.lod.lu/?<%= article.id %>">Definitioun op lod.lu</a></p></div>
+    </d:entry>
+<% }) %>
+<d:entry id="front_back_matter" d:title="Front/Back Matter">
+	<h1>Lëtzebuerger Online Dictionnaire – lod.lu</h1>
+    <p><span>De <em>Lëtzebuerger Online Dictionnaire</em> (<em>LOD</em>) ass en offiziellen Tool fir d'Dokumentatioun vun der Lëtzebuerger Sprooch, deem seng Originnen zeréckginn op de <em><a href="http://legilux.public.lu/eli/etat/leg/rgd/1999/07/29/n2/jo"> Règlement grand-ducal vum 29. Juli 1999 portant création du Conseil permanent de la langue luxembourgeoise.</a>.</em></span></p>
+    <p><span>Duerch seng Ziler an säin Ëmfang ass den <em>LOD</em>, e Wierderbuch, dat ganz besonnesch un de charakteristesche méisproochege Kontext vum Grand-Duché ugepasst gouf, eenzegaarteg um Plang vun der aktueller lëtzebuergescher Lexikografie.</span></p>
+    <p><span>Dëst Dokument soll am Detail erklären, wéi den Dictionnaire, deen der aktueller lëtzebuergescher Sprooch véier Iwwersetzungssproochen (Däitsch, Franséisch, Englesch a Portugisesch) géintiwwerstellt, opgebaut ass a wéi e funktionéiert.</span></p>
+    <p><span>Den <em>Zenter fir d'Lëtzebuerger Sprooch</em> (<a href="http://zls.lu">zls.lu</a>), deen duerch d'<em><a href="http://legilux.public.lu/eli/etat/leg/loi/2018/07/20/a646/jo">Gesetz vum 20. Juli 2018 iwwer d’Promotioun vun der Lëtzebuerger Sprooch</a></em> geschafe gouf,<em></em> këmmert sech ëm d'Maintenance an ëm d'Entwécklung vum <em>LOD</em>.</span></p>
+</d:entry>
+</d:dictionary>
