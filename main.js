@@ -92,7 +92,7 @@ allArticles = allArticles.map(article => {
       desc.find('img[title="Gebäerdesprooch"]').replaceWith(function() { // replace sign language buttons with a link
         const href = $(this).next().find('iframe[title="vimeo-player"]').attr('src')
         if (href !== undefined) {
-          return $('<a href="'+href+'">Gebäerdesprooch</a>');
+          return $('<a class="sign-language" href="'+href+'">Gebäerdesprooch</a>');
         } else {
           return '';
         }
@@ -101,6 +101,10 @@ allArticles = allArticles.map(article => {
       desc.find('#audiobutton').replaceWith(function() { // replace audio buttons with external links
         return $(audioLink);      
       });
+      desc.find('span.info_icon').replaceWith(function() { // replace audio buttons with external links
+        return $('<span class="info_icon" aria-label="Informatioun">ℹ️ </span>');      
+      });
+
       desc = desc.html().replace(/&nbsp;/g, ' ') // html entities are not accepted in the xml output.
 
       const title = (article['lod:article']['$text'])?article['lod:article']['$text']:article['lod:article']['lod:item-adresse']['$text']

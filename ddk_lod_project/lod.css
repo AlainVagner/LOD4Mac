@@ -1,24 +1,145 @@
-@charset "UTF-8";
 @namespace d url(http://www.apple.com/DTDs/DictionaryService-1.0.rng);
 
-a.audio, span.klass {
+body {
+	font-size: 10pt;
+	font-family: -apple-system;
+	margin-left: 0.9em;
+	margin-right: 0.9em;
+	margin-top: 1.0em;
+	margin-bottom: 1.5em;
+	color: text;
+}
+
+html.apple_client-panel body {
+	margin-top: 0em;
+}
+
+a {
+	color: -webkit-link;
+	text-decoration: none;
+}
+
+a:hover {
+	color: -webkit-link;
+	text-decoration: underline;
+}
+
+html.apple_client-panel a,
+html.apple_client-panel a:hover {
+	color: text;
+	text-decoration: none;
+}
+
+a.audio, a.sign-language, span.klass {
 	margin-left: 0.5em;
 }
 
-h1	{
-	font-size: 150%;
+span.klass {
+	font-size: 110%;
 }
 
-h3	{
+span.adress.mentioun_adress {
+	font-size: 170%;
+	font-weight: normal;
+	line-height: 150%;
+	-webkit-hyphens: auto;
+}
+
+div.bspsblock {
+	font-size: 90%;
+}
+
+span.bspsintro, span.intro_syn {
+	color: -apple-system-secondary-label;
+	line-height: 130%;
+	text-transform: uppercase;
+}
+
+span.bspsintro {
 	font-size: 100%;
 }
 
-span.column {
-	display: block;
-	border: solid 2px #c0c0c0;
-	margin-left: 2em;
-	margin-right: 2em;
+span.intro_syn {
+	font-size: 84%;
+}
+
+span.intro_et {
+	color: -apple-system-secondary-label;
+	font-size: 80%;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+span.mentioun_adress {
+	font-weight: bold;
+}
+
+#zou {
+	display:none;
+}
+
+span.mu_bsp, span.mu {
+	color: -apple-system-secondary-label;
+	font-style: italic;
+}
+
+span.mu_bsp {
+	font-size: 80%;	
+}
+
+div.uds_block {
+	margin-left: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 110%;
+}
+
+span.uds_num {
+	margin-left: -1em;
+	margin-right: 0.2em;
+	font-weight: 600;
+	color: -apple-system-secondary-label;
+}
+
+span.beispill {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+div.infobox {
+	border: solid 1px -apple-system-tertiary-label;
+	padding: 0.7em;
+	border-radius: 3px;
 	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	padding: 0.5em;
+}
+
+div.infobox div:last-child {
+	font-size: 85%;
+	color: -apple-system-secondary-label;
+}
+
+span.lu_link {
+	color: -webkit-link;
+}
+
+html.apple_client-panel span.lu_link {
+	color: text;
+}
+
+div.tl_block {
+	margin-left: 1em;
+}
+
+span.info_gramm_tl, span.info_gramm_tl_plus {
+	font-size: 110%;
+	display: inline-block;
+	margin-top: 1em;
+}
+
+span.text_gen + span.intro_et, span.et + span.intro_et {
+	margin-left: 1em;
+}
+
+span.info_flex + span.mentioun_adress, span.intro_syn + span.lu_link, span.popuptext {
+	margin-left: 0.5em;
 }
