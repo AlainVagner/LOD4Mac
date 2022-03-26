@@ -1,0 +1,10 @@
+*-lod-opendata/
+data/*
+!data/.keep
+node_modules/
+build.log
+ddk_lod_project/objects/
+LOD.dictionary.zip
+.DS_Store
+.AppleDouble
+.LSOverride
