@@ -8,7 +8,7 @@ const debug = false
 // get the latest folder with the data coming from lod-extract
 const srcDir = fs.readdirSync('.').filter(e => { return e.match(/-lod-opendata/)})
 if (srcDir.length == 0) {
-  console.error('Missing data, please run `npx lod-extract`')
+  console.error('Missing data, please run `npm install`')
   process.exit(1)
 }
 const src = srcDir[0]+'/json'
@@ -104,7 +104,9 @@ allArticles = allArticles.map(article => {
       desc.find('span.info_icon').replaceWith(function() { // replace audio buttons with external links
         return $('<span class="info_icon" aria-label="Informatioun">ℹ️ </span>');      
       });
-
+      if (desc.find('#ipa').text().trim().length !== 0) {
+        $('.klass').prepend($(' <span class="ipa"> | '+desc.find('#ipa').text()+' | </span> ')) // short version of IPA available in the panel
+      }
       desc = desc.html().replace(/&nbsp;/g, ' ') // html entities are not accepted in the xml output.
 
       const title = (article['lod:article']['$text'])?article['lod:article']['$text']:article['lod:article']['lod:item-adresse']['$text']

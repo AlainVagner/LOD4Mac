@@ -24,6 +24,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+html.apple_client-panel {
+	font-size: 70%;
+}
+
 html.apple_client-panel a,
 html.apple_client-panel a:hover {
 	color: text;
@@ -34,14 +38,38 @@ a.audio, a.sign-language, span.klass {
 	margin-left: 0.5em;
 }
 
+html.apple_client-panel a.audio, 
+html.apple_client-panel a.sign-language, 
+html.apple_client-panel a.lod_article {
+	display: none;
+}
+
 span.klass {
 	font-size: 110%;
+}
+
+
+span.klass span.ipa {
+	display: none;
+}
+
+html.apple_client-panel span.klass span.ipa {
+	display: inline-block;
+	color: -apple-system-secondary-label;
+	margin-right: 0.3em;
 }
 
 span.adress.mentioun_adress {
 	font-size: 170%;
 	font-weight: normal;
 	line-height: 150%;
+	-webkit-hyphens: auto;
+}
+
+html.apple_client-panel span.adress.mentioun_adress {
+	font-size: 110%;
+	font-weight: normal;
+	line-height: 100%;
 	-webkit-hyphens: auto;
 }
 
@@ -94,6 +122,11 @@ div.uds_block {
 	font-size: 110%;
 }
 
+html.apple_client-panel div.uds_block {
+	margin-top: 0;
+	font-size: 100%;
+}
+
 span.uds_num {
 	margin-left: -1em;
 	margin-right: 0.2em;
@@ -113,17 +146,13 @@ div.infobox {
 	margin-top: 0.5em;
 }
 
+html.apple_client-panel div.infobox {
+	display: none;
+}
+
 div.infobox div:last-child {
 	font-size: 85%;
 	color: -apple-system-secondary-label;
-}
-
-span.lu_link {
-	color: -webkit-link;
-}
-
-html.apple_client-panel span.lu_link {
-	color: text;
 }
 
 div.tl_block {
@@ -142,4 +171,8 @@ span.text_gen + span.intro_et, span.et + span.intro_et {
 
 span.info_flex + span.mentioun_adress, span.intro_syn + span.lu_link, span.popuptext {
 	margin-left: 0.5em;
+}
+
+span.lu_link + span.mentioun_adress, span.mentioun_adress + span.lu_link {
+	margin-left: 0.2em;
 }
