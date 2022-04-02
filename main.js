@@ -108,6 +108,11 @@ allArticles = allArticles.map(article => {
         $('.klass').prepend($(' <span class="ipa"> | ' + desc.find('#ipa').text() + ' | </span> ')) // short version of IPA available in the panel
       }
 
+      const invalidIds = ['ipa', 'op', 'zou', 'sprangop'] // remove duplicate ids
+      invalidIds.forEach((id) => {
+        desc.find('#'+id).addClass(id).removeAttr('id')
+      })
+
       desc.find('.adress.mentioun_adress').attr('role', 'heading').attr('aria-level', '1')
 
       desc = desc.html().replace(/&nbsp;/g, ' ') // FIXME: html entities are not accepted in the xml output.
