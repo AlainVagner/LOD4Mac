@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="lb">
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="../ddk_lod_project/lod.css" media="screen">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#toggle').addEventListener('click', function() {
+                document.querySelector('html').classList.toggle('apple_client-panel')
+            }, false)
+        })
+    </script>
+</head>
+<body>
+    <main>
+        <button id="toggle">Toggle panel mode</button>
+    <% allArticles.forEach(article => { %>
+        <div id="<%= article.id %>" lang="lb">
+            <%- article.desc %>
+            <p class="lod_article">Definitioun op lod.lu: <a href="https://www.lod.lu/?<%= article.id %>"><%= article.title %></a></p>
+        </div>
+    <% }) %>
+    </main>    
+</body>
+</html>

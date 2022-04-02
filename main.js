@@ -145,4 +145,14 @@ ejs.renderFile('./main.ejs', { allArticles: allArticles }, function (err, str) {
   }
   fs.writeFileSync('./data/lod.xml', str)
 });
+if (debug) {
+  ejs.renderFile('./test.ejs', { allArticles: allArticles }, function (err, str) {
+    if (err !== null) {
+      console.error(err)
+      process.exit(1)
+    }
+    fs.writeFileSync('./data/test.html', str)
+  });
+}
+
 console.error('Articles Not Found:', articlesNotFound)
