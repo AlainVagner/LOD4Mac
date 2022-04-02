@@ -42,7 +42,7 @@ span.klass {
 
 html.apple_client-panel a.audio,
 html.apple_client-panel a.sign-language,
-html.apple_client-panel a.lod_article {
+html.apple_client-panel p.lod_article {
 	display: none;
 }
 

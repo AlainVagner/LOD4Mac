@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<d:dictionary xmlns="http://www.w3.org/1999/xhtml" xmlns:d="http://www.apple.com/DTDs/DictionaryService-1.0.rng">
+<d:dictionary xmlns="http://www.w3.org/1999/xhtml" xmlns:d="http://www.apple.com/DTDs/DictionaryService-1.0.rng"  lang="lb">
 <% allArticles.forEach(article => { %>
     <d:entry id="<%= article.id %>" d:title="<%= article.title %>" lang="lb">
         <% article.index.forEach(i => { %>
             <d:index d:value="<%= i %>"/>
         <% }) %>
         <%- article.desc %>
-        <p><a class="lod_article" href="https://www.lod.lu/?<%= article.id %>">Definitioun vu(n) „<%= article.title %>“ op lod.lu</a></p>
+        <p class="lod_article">Definitioun op lod.lu: <a href="https://www.lod.lu/?<%= article.id %>"><%= article.title %></a></p>
     </d:entry>
 <% }) %>
 <d:entry id="front_back_matter" d:title="Front/Back Matter" lang="lb">
