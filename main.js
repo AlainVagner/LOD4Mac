@@ -107,7 +107,10 @@ allArticles = allArticles.map(article => {
       if (desc.find('#ipa').text().trim().length !== 0) {
         $('.klass').prepend($(' <span class="ipa"> | ' + desc.find('#ipa').text() + ' | </span> ')) // short version of IPA available in the panel
       }
-      desc = desc.html().replace(/&nbsp;/g, ' ') // html entities are not accepted in the xml output.
+
+      desc.find('.adress.mentioun_adress').attr('role', 'heading').attr('aria-level', '1')
+
+      desc = desc.html().replace(/&nbsp;/g, ' ') // FIXME: html entities are not accepted in the xml output.
 
       const title = (article['lod:article']['$text']) ? article['lod:article']['$text'] : article['lod:article']['lod:item-adresse']['$text']
 
