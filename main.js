@@ -102,7 +102,7 @@ allArticles = allArticles.map(article => {
         return $(audioLink);
       });
       desc.find('span.info_icon').replaceWith(function () { // replace audio buttons with external links
-        return $('<span class="info_icon" aria-label="Informatioun">ℹ️ </span>');
+        return $('<span class="info_icon" aria-hidden="true">ℹ️ </span><span class="sr-only">Informatioun</span>');
       });
       if (desc.find('#ipa').text().trim().length !== 0) {
         $('.klass').prepend($(' <span class="ipa"> | ' + desc.find('#ipa').text() + ' | </span> ')) // short version of IPA available in the panel
