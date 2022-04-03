@@ -65,7 +65,7 @@ fs.readdirSync(src).forEach(file => {
 let articlesNotFound = 0
 
 // when debug is true, we generate only a few words
-const allowList = ['ZWECK1', 'SINN1', 'RISEG1', 'FENNEF1', 'SEIER2', 'DOMAT1', 'ECH1', 'GEINT1', 'MEE2', 'ZWAR1', 'ENG1', 'DAJEE1', 'DAITSCHLAND1', 'REIMECH1', 'UELZECHT1']
+const allowList = ['STOUSSEN1', 'ZWECK1', 'SINN1', 'RISEG1', 'FENNEF1', 'SEIER2', 'DOMAT1', 'ECH1', 'GEINT1', 'MEE2', 'ZWAR1', 'ENG1', 'DAJEE1', 'DAITSCHLAND1', 'REIMECH1', 'UELZECHT1']
 
 
 allArticles = allArticles.map(article => {
@@ -104,8 +104,9 @@ allArticles = allArticles.map(article => {
       desc.find('span.info_icon').replaceWith(function () { // replace audio buttons with external links
         return $('<span class="info_icon" aria-hidden="true">ℹ️ </span><span class="sr-only">Informatioun</span>');
       });
-      if (desc.find('#ipa').text().trim().length !== 0) {
-        $('.klass').prepend($(' <span class="ipa"> | ' + desc.find('#ipa').text() + ' | </span> ')) // short version of IPA available in the panel
+      if (desc.find('#ipa').text().trim().length !== 0) { // short version of IPA available in the panel
+        const klass = ($('.klass + .klass').length !== 0)?$('.klass + .klass'):$('.klass') // manage case when multiple .klass in a def
+        klass.prepend($(' <span class="ipa"> | ' + desc.find('#ipa').text() + ' | </span> ')) 
       }
 
       const invalidIds = ['ipa', 'op', 'zou', 'sprangop'] // remove duplicate ids
@@ -145,14 +146,14 @@ ejs.renderFile('./main.ejs', { allArticles: allArticles }, function (err, str) {
   }
   fs.writeFileSync('./data/lod.xml', str)
 });
-if (debug) {
-  ejs.renderFile('./test.ejs', { allArticles: allArticles }, function (err, str) {
-    if (err !== null) {
-      console.error(err)
-      process.exit(1)
-    }
-    fs.writeFileSync('./data/test.html', str)
-  });
-}
+
+ejs.renderFile('./test.ejs', { allArticles: allArticles }, function (err, str) {
+  if (err !== null) {
+    console.error(err)
+    process.exit(1)
+  }
+  fs.writeFileSync('./data/test.html', str)
+});
+
 
 console.error('Articles Not Found:', articlesNotFound)
