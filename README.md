@@ -4,7 +4,8 @@
 
 LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://www.lod.lu/). The purpose of this project is to package the definitions from LOD into a dictionary file compatible with Dictionary.app on MacOS, thus enabling the user to right-click with a mouse or to force tap with a trackpad on any word in luxembourgish in most of the apps and get directly access to its definition.
 
-picture
+<img width="831" alt="Screenshot of TextEdit showing the definition of a luxembourgish word" src="https://user-images.githubusercontent.com/16536731/161426311-aaaf9047-6061-4fd1-91c4-48fde6d57e58.png">
+
 
 ## Installation
 
@@ -23,7 +24,11 @@ picture
 
 When in an application supporting it (ex: Safari, TextEdit, Notes, ...), to get the definition of a word, you can [force click](https://support.apple.com/en-us/HT204352) on it if you have a trackpad or right-click then select "look up" in the menu. The first time you use this feature, you will need to configure it to display information coming from dictionaries.
 
-video
+
+
+https://user-images.githubusercontent.com/16536731/161426372-de15175c-85ac-4d01-b598-3aa7b7266778.mp4
+
+
 
 ### With Dictionary.app
 
