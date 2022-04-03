@@ -1,5 +1,0 @@
-0. Create the folder ~/Library/Dictionaries if it does not exist (in the Finder you can go to this folder with Command-Shift-G)
-1. Copy the folder named "Lëtzebuerger Online Dictionnaire (LOD).dictionary" into ~/Library/Dictionaries 
-2. Start Dictionary.app
-3. Go to the menu Dictionary > Preferences
-4. In the list on top, check "Lëtzebuerger Online Dictionnaire (LOD)"
