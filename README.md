@@ -24,15 +24,14 @@ LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://
 
 When in an application supporting it (ex: Safari, TextEdit, Notes, ...), to get the definition of a word, you can [force click](https://support.apple.com/en-us/HT204352) on it if you have a trackpad or right-click then select "look up" in the menu. The first time you use this feature, you will need to configure it to display information coming from dictionaries.
 
-
-
 https://user-images.githubusercontent.com/16536731/161426372-de15175c-85ac-4d01-b598-3aa7b7266778.mp4
-
-
 
 ### With Dictionary.app
 
 You can select the LOD dictionary in the tabs on top of the window, then use the search field. For now, you can only search words in luxembourgish.
+
+<img width="957" alt="Screenshot of Dictionary.app showing the definition of the word Squirrel in Luxembourgish" src="https://user-images.githubusercontent.com/16536731/161427895-2d26de33-fd37-4016-aedc-bde898287c0c.png">
+
 
 ## Development
 
