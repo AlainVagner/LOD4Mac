@@ -69,7 +69,7 @@ In the compatible apps, you can find the spell checker by right-clicking on a te
 
 When using the MacOS spell checker, it seems to be more reliable to select the spelling dictionary than to rely on automatic language detection. 
 
-<img alt="Screenshot of the MacOS spellchecker window" src="https://user-images.githubusercontent.com/16536731/162820513-d7554b08-6644-4816-9c7e-2891ae38f529.png">
+<img width="719" alt="Screenshot of the MacOS spellchecker window" src="https://user-images.githubusercontent.com/16536731/162820513-d7554b08-6644-4816-9c7e-2891ae38f529.png">
 
 To install the Luxembourgish HunSpell dictionary, you need to download the files lb_LU.aff and lb_LU.dic from the [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) repository and copy them into `~/Library/Spelling` (create this folder if it does not exist yet). Then go to the "System preferences" > "Keyboard" > "Text". In the "Spelling" drop-down, select "Set up..." at the bottom of the list and then activate "Lëtzebuergesch (Library)". This dictionary will now be available in the MacOS spell checker.
 
