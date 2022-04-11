@@ -12,11 +12,11 @@ LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://
 0. Create the folder `~/Library/Dictionaries` if it does not exist (in the Finder, you can go to this folder with <kbd>Command-Shift-G</kbd>)
 1. Download the latest release from the [release page](https://github.com/AlainVagner/LOD4Mac/releases). The file name follows the pattern `LOD.dictionary.vX.X.X.zip`.
 2. Unzip the zip archive.
-3. Copy the folder named "Lëtzebuerger Online Dictionnaire (LOD).dictionary" into ~/Library/Dictionaries 
+3. Copy the folder named "Lëtzebuerger Online Dictionnaire (LOD).dictionary" into `~/Library/Dictionaries` 
 4. Open Dictionary.app
-5. Go to the menu Dictionary > Preferences
+5. Go to the menu "Dictionary" > "Preferences"
 6. In the list at the top of the window, find in it the "Lëtzebuerger Online Dictionnaire (LOD)" and activate it.
-7. Congratulations, the dictionary is now installed on your system! 
+7. Congratulations, the dictionary is now installed on your system! :tada:
 
 ## Usage
 
