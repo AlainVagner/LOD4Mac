@@ -46,9 +46,9 @@ The dictionary is produced using [Apple's Dictionary Development Kit](https://gi
 
 To be able to generate the dictionary, please follow these steps:
 
-1. Clone the Dictionary Development Kit
-2. Clone this repository 
-3. Adjust if necessary the variable DICT_BUILD_TOOL_DIR in `ddk_lod_project/Makefile`
+0. Clone the Dictionary Development Kit
+1. Clone this repository 
+2. Adjust if necessary the variable DICT_BUILD_TOOL_DIR in `ddk_lod_project/Makefile`
 3. Install the required npm packages with `npm install`
 4. The HTML from the definitions comes from lod.lu, all the pages from the site will be crawled locally. To do this, run `npm run crawl` (duration: ~ 10 hours)
 5. Build the dictionary with `npm run build`. This command will also deploy the dictionary into your `~/Library/Dictionaries` folder and create an archive called `LOD.dictionary.zip` 
