@@ -32,6 +32,13 @@ You can select the LOD dictionary in the tabs on top of the window, then use the
 
 <img width="957" alt="Screenshot of Dictionary.app showing the definition of the word Squirrel in Luxembourgish" src="https://user-images.githubusercontent.com/16536731/161427895-2d26de33-fd37-4016-aedc-bde898287c0c.png">
 
+### With Spotlight
+
+It is possible to search the definition of a word with [Spotlight](https://support.apple.com/en-gb/guide/mac-help/mchlp1008/mac). You can type the first letters of a word and Spotlight will try to automatically complete the word. In the results list, in the "definition" section, you can select the item corresponding to the word you are looking for and access its definition directly in the Spotlight window.
+
+<img width="792" alt="Screenshot of a Spotlight window with a luxembourgish word in the search field and the definition is shown" src="https://user-images.githubusercontent.com/16536731/162815758-67174475-98c8-452e-9350-5e254240987c.png">
+
+To enable this feature, you may need to configure it in the "System Preferences" then "Spotlight" and activate "Definition" in the "Search results" tab.
 
 ## Development
 
@@ -51,6 +58,20 @@ To be able to generate the dictionary, please follow these steps:
 This dictionary is a reuse of the open data published by [ZLS](https://portal.education.lu/zls) on [data.public.lu](https://data.public.lu/):
 - [Lëtzebuerger Online Dictionnaire](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire/)
 - [Lëtzebuerger Online Dictionnaire - komplett Wuertlëscht / complete wordlist ](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-komplett-wuertlescht-complete-wordlist/)
+
+## Related projects
+
+The [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) project from [Spellchecker.lu](https://spellchecker.lu/) is a HunSpell dictionary for the Luxembourgish language. MacOS can use HunSpell dictionaries for spell checking. Once you have installed this dictionary onto your system, you will be able to use it for spell checking in most applications.
+
+<img width="464" alt="Screenshot of a text field in Safari containing some text with spelling errors and a pop-up showing correction proposals" src="https://user-images.githubusercontent.com/16536731/162820443-417d725d-f095-4af2-97a1-68602616bfdd.png">
+
+In the compatible apps, you can find the spell checker by right clicking on a text input area and selecting "Spelling and grammar" then "Show spelling and grammar".
+
+When using the MacOS spell checker, it seems to be more reliable to select the spelling dictionary than to rely on the automatic language detection. 
+
+<img alt="Screenshot of the MacOS spellchecker window" src="https://user-images.githubusercontent.com/16536731/162820513-d7554b08-6644-4816-9c7e-2891ae38f529.png">
+
+To install the luxembourgish HunSpell dictionary, you need to download the files lb_LU.aff and lb_LU.dic from the [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) repository and copy them into `~/Library/Spelling` (create this folder if it does not exist yet). Then go to the "System preferences" > "Keyboard" > "Text". In the "Spelling" drop down, select "Set up..." at the bottom of the list and then activate "Lëtzebuergesch (Library)". This dictionary will now be available in the MacOS spell checker.
 
 
 ## License
