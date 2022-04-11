@@ -2,7 +2,7 @@
 
 ## What is this?
 
-LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://www.lod.lu/). The purpose of this project is to package the definitions from LOD into a dictionary file compatible with Dictionary.app on MacOS, thus enabling the user to right-click with a mouse or to force tap with a trackpad on any word in luxembourgish in most of the apps and get directly access to its definition.
+LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://www.lod.lu/). The purpose of this project is to package the definitions from LOD into a dictionary file compatible with Dictionary.app on MacOS, thus enabling the user to right-click with a mouse or to force tap with a trackpad on any word in Luxembourgish in most of the apps and get a direct access to its definition.
 
 <img width="831" alt="Screenshot of TextEdit showing the definition of a luxembourgish word" src="https://user-images.githubusercontent.com/16536731/161426311-aaaf9047-6061-4fd1-91c4-48fde6d57e58.png">
 
@@ -15,20 +15,20 @@ LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://
 3. Copy the folder named "Lëtzebuerger Online Dictionnaire (LOD).dictionary" into ~/Library/Dictionaries 
 4. Open Dictionary.app
 5. Go to the menu Dictionary > Preferences
-6. In the list on top of the window, find in it the "Lëtzebuerger Online Dictionnaire (LOD)" and activate it.
+6. In the list at the top of the window, find in it the "Lëtzebuerger Online Dictionnaire (LOD)" and activate it.
 7. Congratulations, the dictionary is now installed on your system! 
 
 ## Usage
 
 ### Get access to the definition of a word in most apps
 
-When in an application supporting it (ex: Safari, TextEdit, Notes, ...), to get the definition of a word, you can [force click](https://support.apple.com/en-us/HT204352) on it if you have a trackpad or right-click then select "look up" in the menu. The first time you use this feature, you will need to configure it to display information coming from dictionaries.
+When in an application supporting it (ex: Safari, TextEdit, Notes, ...), to get the definition of a word, you can [force-click](https://support.apple.com/en-us/HT204352) on it if you have a trackpad or right-click then select "Look Up" in the menu. The first time you use this feature, you will need to configure it to display information coming from dictionaries.
 
 https://user-images.githubusercontent.com/16536731/161426372-de15175c-85ac-4d01-b598-3aa7b7266778.mp4
 
 ### With Dictionary.app
 
-You can select the LOD dictionary in the tabs on top of the window, then use the search field. For now, you can only search words in luxembourgish.
+You can select the LOD dictionary in the tabs on top of the window, then use the search field. For now, you can only search words in Luxembourgish.
 
 <img width="957" alt="Screenshot of Dictionary.app showing the definition of the word Squirrel in Luxembourgish" src="https://user-images.githubusercontent.com/16536731/161427895-2d26de33-fd37-4016-aedc-bde898287c0c.png">
 
@@ -38,7 +38,7 @@ It is possible to search the definition of a word with [Spotlight](https://suppo
 
 <img width="792" alt="Screenshot of a Spotlight window with a luxembourgish word in the search field and the definition is shown" src="https://user-images.githubusercontent.com/16536731/162815758-67174475-98c8-452e-9350-5e254240987c.png">
 
-To enable this feature, you may need to configure it in the "System Preferences" then "Spotlight" and activate "Definition" in the "Search results" tab.
+To enable this feature, you may need to configure it in the "System Preferences" then "Spotlight" and activate "Definition" in the "search results" tab.
 
 ## Development
 
@@ -65,18 +65,18 @@ The [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) pro
 
 <img width="464" alt="Screenshot of a text field in Safari containing some text with spelling errors and a pop-up showing correction proposals" src="https://user-images.githubusercontent.com/16536731/162820443-417d725d-f095-4af2-97a1-68602616bfdd.png">
 
-In the compatible apps, you can find the spell checker by right clicking on a text input area and selecting "Spelling and grammar" then "Show spelling and grammar".
+In the compatible apps, you can find the spell checker by right-clicking on a text input area and selecting "Spelling and grammar" then "Show spelling and grammar".
 
-When using the MacOS spell checker, it seems to be more reliable to select the spelling dictionary than to rely on the automatic language detection. 
+When using the MacOS spell checker, it seems to be more reliable to select the spelling dictionary than to rely on automatic language detection. 
 
 <img alt="Screenshot of the MacOS spellchecker window" src="https://user-images.githubusercontent.com/16536731/162820513-d7554b08-6644-4816-9c7e-2891ae38f529.png">
 
-To install the luxembourgish HunSpell dictionary, you need to download the files lb_LU.aff and lb_LU.dic from the [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) repository and copy them into `~/Library/Spelling` (create this folder if it does not exist yet). Then go to the "System preferences" > "Keyboard" > "Text". In the "Spelling" drop down, select "Set up..." at the bottom of the list and then activate "Lëtzebuergesch (Library)". This dictionary will now be available in the MacOS spell checker.
+To install the Luxembourgish HunSpell dictionary, you need to download the files lb_LU.aff and lb_LU.dic from the [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) repository and copy them into `~/Library/Spelling` (create this folder if it does not exist yet). Then go to the "System preferences" > "Keyboard" > "Text". In the "Spelling" drop-down, select "Set up..." at the bottom of the list and then activate "Lëtzebuergesch (Library)". This dictionary will now be available in the MacOS spell checker.
 
 
 ## License
 
-This software is licensed under the [MIT license](./LICENSE). The dictionary producted by this software is published under [Creative Commons Zero](https://creativecommons.org/publicdomain/zero/1.0/deed.en) (public domain).
+This software is licensed under the [MIT license](./LICENSE). The dictionary produced by this software is published under [Creative Commons Zero](https://creativecommons.org/publicdomain/zero/1.0/deed.en) (public domain).
 
 
 
