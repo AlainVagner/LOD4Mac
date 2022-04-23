@@ -9,3 +9,6 @@ LOD.dictionary.zip
 .AppleDouble
 .LSOverride
 todo.txt
+packaging/package/
+packaging/tmp/
+*.pkg

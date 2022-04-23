@@ -11,6 +11,6 @@
   "scripts": {
     "install": "npx lod-extract && node getWordList.js && cd data && tar xvzf *-lod-wl.tar.gz",
     "crawl": "bash ./crawl.sh",
-    "build": "node main.js > build.log && cd ddk_lod_project && make && make install && make archive"
+    "build": "node main.js > build.log && cd ddk_lod_project && make && cd ../packaging && bash ./packaging.sh"
   }
 }

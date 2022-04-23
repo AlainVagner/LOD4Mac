@@ -9,14 +9,16 @@ LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://
 
 ## Installation
 
-0. Create the folder `~/Library/Dictionaries` if it does not exist (in the Finder, you can go to this folder with <kbd>Command-Shift-G</kbd>)
-1. Download the latest release from the [release page](https://github.com/AlainVagner/LOD4Mac/releases). The file name follows the pattern `LOD.dictionary.vX.X.X.zip`.
-2. Unzip the zip archive.
-3. Copy the folder named "Lëtzebuerger Online Dictionnaire (LOD).dictionary" into `~/Library/Dictionaries` 
-4. Open Dictionary.app
-5. Go to the menu "Dictionary" > "Preferences"
-6. In the list at the top of the window, find in it the "Lëtzebuerger Online Dictionnaire (LOD)" and activate it.
-7. Congratulations, the dictionary is now installed on your system! :tada:
+1. Download the latest installation package from the [release page](https://github.com/AlainVagner/LOD4Mac/releases).
+2. Install this package.
+
+# Configuration 
+
+1. Open Dictionary.app
+2. Go to the menu "Dictionary" > "Preferences"
+3. In the list at the top of the window, find in it the "Lëtzebuerger Online Dictionnaire (LOD)" and activate it.
+4. Go to the "System preferences" > "Keyboard" > "Text". In the "Spelling" drop-down, select "Set up..." at the bottom of the list and then activate "Lëtzebuergesch (Library)". 
+4. Congratulations, the dictionaries are now installed on your system! :tada:
 
 ## Usage
 
@@ -40,6 +42,19 @@ It is possible to search the definition of a word with [Spotlight](https://suppo
 
 To enable this feature, you may need to configure it in the "System Preferences" then "Spotlight" and activate "Definition" in the "search results" tab.
 
+## Spell checking
+
+The [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) project from [Spellchecker.lu](https://spellchecker.lu/) is a HunSpell dictionary for the Luxembourgish language. This dictionary is included in the LOD4Mac package. MacOS can use HunSpell dictionaries for spell checking. Once you have installed this dictionary onto your system, you will be able to use it for spell checking in most applications.
+
+<img width="464" alt="Screenshot of a text field in Safari containing some text with spelling errors and a pop-up showing correction proposals" src="https://user-images.githubusercontent.com/16536731/162820443-417d725d-f095-4af2-97a1-68602616bfdd.png">
+
+In the compatible apps, you can find the spell checker by right-clicking on a text input area and selecting "Spelling and grammar" then "Show spelling and grammar".
+
+When using the MacOS spell checker, it seems to be more reliable to select the spelling dictionary than to rely on automatic language detection. 
+
+<img width="719" alt="Screenshot of the MacOS spellchecker window" src="https://user-images.githubusercontent.com/16536731/162820513-d7554b08-6644-4816-9c7e-2891ae38f529.png">
+
+
 ## Development
 
 The dictionary is produced using [Apple's Dictionary Development Kit](https://github.com/SebastianSzturo/Dictionary-Development-Kit). A conversion script from the data coming from LOD and the format needed by the Dictionary Development is available in this repository.
@@ -51,7 +66,7 @@ To be able to generate the dictionary, please follow these steps:
 2. Adjust if necessary the variable DICT_BUILD_TOOL_DIR in `ddk_lod_project/Makefile`
 3. Install the required npm packages with `npm install`
 4. The HTML from the definitions comes from lod.lu, all the pages from the site will be crawled locally. To do this, run `npm run crawl` (duration: ~ 10 hours)
-5. Build the dictionary with `npm run build`. This command will also deploy the dictionary into your `~/Library/Dictionaries` folder and create an archive called `LOD.dictionary.zip` 
+5. Build the dictionary with `npm run build`. The resulting package is then available in the project folder.
 
 ## Open Data
 
@@ -59,24 +74,10 @@ This dictionary is a reuse of the open data published by [ZLS](https://portal.ed
 - [Lëtzebuerger Online Dictionnaire](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire/)
 - [Lëtzebuerger Online Dictionnaire - komplett Wuertlëscht / complete wordlist ](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-komplett-wuertlescht-complete-wordlist/)
 
-## Related projects
-
-The [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) project from [Spellchecker.lu](https://spellchecker.lu/) is a HunSpell dictionary for the Luxembourgish language. MacOS can use HunSpell dictionaries for spell checking. Once you have installed this dictionary onto your system, you will be able to use it for spell checking in most applications.
-
-<img width="464" alt="Screenshot of a text field in Safari containing some text with spelling errors and a pop-up showing correction proposals" src="https://user-images.githubusercontent.com/16536731/162820443-417d725d-f095-4af2-97a1-68602616bfdd.png">
-
-In the compatible apps, you can find the spell checker by right-clicking on a text input area and selecting "Spelling and grammar" then "Show spelling and grammar".
-
-When using the MacOS spell checker, it seems to be more reliable to select the spelling dictionary than to rely on automatic language detection. 
-
-<img width="719" alt="Screenshot of the MacOS spellchecker window" src="https://user-images.githubusercontent.com/16536731/162820513-d7554b08-6644-4816-9c7e-2891ae38f529.png">
-
-To install the Luxembourgish HunSpell dictionary, you need to download the files lb_LU.aff and lb_LU.dic from the [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) repository and copy them into `~/Library/Spelling` (create this folder if it does not exist yet). Then go to the "System preferences" > "Keyboard" > "Text". In the "Spelling" drop-down, select "Set up..." at the bottom of the list and then activate "Lëtzebuergesch (Library)". This dictionary will now be available in the MacOS spell checker.
-
 
 ## License
 
-This software is licensed under the [MIT license](./LICENSE). The dictionary produced by this software is published under [Creative Commons Zero](https://creativecommons.org/publicdomain/zero/1.0/deed.en) (public domain).
+This software is licensed under the [MIT license](./LICENSE). The dictionary produced by this software is published under [Creative Commons Zero](https://creativecommons.org/publicdomain/zero/1.0/deed.en) (public domain). The distribution package includes the files from the [dictionary-lb-lu](https://github.com/spellchecker-lu/dictionary-lb-lu/) project from [Spellchecker.lu](https://spellchecker.lu/) which are distributed under the [EUPL license](https://github.com/spellchecker-lu/dictionary-lb-lu/blob/master/LICENSE.txt).
 
 
 

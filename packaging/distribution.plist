@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+    <pkg-ref id="lu.lod"/>
+    <welcome file="welcome.html" mime-type="text/html"/>
+    <conclusion file="conclusion.html" mime-type="text/html"/>
+    <license file="LICENSE.txt"/>
+    <options customize="never" require-scripts="false" hostArchitectures="x86_64,arm64"/>
+    <domains enable_localSystem="true" />
+    <choices-outline>
+        <line choice="default">
+            <line choice="lu.lod"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="lu.lod" visible="false" customLocation="/Library">
+        <pkg-ref id="lu.lod"/>
+    </choice>
+    <pkg-ref id="lu.lod" version="1.0.0" onConclusion="none">lod.pkg</pkg-ref>
+</installer-gui-script>
