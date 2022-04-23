@@ -12,7 +12,7 @@ LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://
 1. Download the latest installation package from the [release page](https://github.com/AlainVagner/LOD4Mac/releases).
 2. Install this package.
 
-# Configuration 
+## Configuration 
 
 1. Open Dictionary.app
 2. Go to the menu "Dictionary" > "Preferences"
