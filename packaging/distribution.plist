@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <installer-gui-script minSpecVersion="1">
-    <pkg-ref id="lu.lod"/>
+    <title>LOD4Mac</title>
+    <pkg-ref id="org.sous-anneau.lod4mac"/>
     <welcome file="welcome.html" mime-type="text/html"/>
     <conclusion file="conclusion.html" mime-type="text/html"/>
     <license file="LICENSE.txt"/>
@@ -8,12 +9,12 @@
     <domains enable_localSystem="true" />
     <choices-outline>
         <line choice="default">
-            <line choice="lu.lod"/>
+            <line choice="org.sous-anneau.lod4mac"/>
         </line>
     </choices-outline>
     <choice id="default"/>
-    <choice id="lu.lod" visible="false" customLocation="/Library">
-        <pkg-ref id="lu.lod"/>
+    <choice id="org.sous-anneau.lod4mac" visible="false" customLocation="/Library">
+        <pkg-ref id="org.sous-anneau.lod4mac"/>
     </choice>
-    <pkg-ref id="lu.lod" version="1.0.0" onConclusion="none">lod.pkg</pkg-ref>
+    <pkg-ref id="org.sous-anneau.lod4mac" onConclusion="none">lod.pkg</pkg-ref>
 </installer-gui-script>

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleIdentifier</key>
-	<string>lu.lod</string>
+	<string>org.sous-anneau.lod4mac</string>
 	<key>CFBundleName</key>
 	<string>LOD</string>
 	<key>CFBundleShortVersionString</key>

@@ -12,3 +12,4 @@ todo.txt
 packaging/package/
 packaging/tmp/
 *.pkg
+id.sh
