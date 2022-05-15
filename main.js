@@ -29,6 +29,15 @@ function normalizeArray(a) {
   return a
 }
 
+function titleWrapper(t, level, $) {
+  t.each((i,e) => {
+    const elems = $(e).children().toArray().filter(f => {
+        return f.tagName == 'span'
+    })
+    $(elems).wrapAll(`<h${level} />`)
+  })
+}
+
 let index = {}
 
 // build the word index
@@ -65,7 +74,7 @@ fs.readdirSync(src).forEach(file => {
 let articlesNotFound = 0
 
 // when debug is true, we generate only a few words
-const allowList = ['STOUSSEN1', 'ZWECK1', 'SINN1', 'RISEG1', 'FENNEF1', 'SEIER2', 'DOMAT1', 'ECH1', 'GEINT1', 'MEE2', 'ZWAR1', 'ENG1', 'DAJEE1', 'DAITSCHLAND1', 'REIMECH1', 'UELZECHT1']
+const allowList = ['STOUSSEN1', 'ZWECK1', 'SINN1', 'RISEG1', 'FENNEF1', 'SEIER2', 'DOMAT1', 'ECH1', 'GEINT1', 'MEE2', 'ZWAR1', 'ENG1', 'DAJEE1', 'DAITSCHLAND1', 'REIMECH1', 'UELZECHT1', 'BEISPILL1']
 
 
 allArticles = allArticles.map(article => {
@@ -102,11 +111,10 @@ allArticles = allArticles.map(article => {
         return $(audioLink);
       });
       desc.find('span.info_icon').replaceWith(function () { // replace audio buttons with external links
-        return $('<span class="info_icon" aria-hidden="true">ℹ️ </span><span class="sr-only">Informatioun</span>');
+        return $('<span class="info_icon" aria-hidden="true">ℹ️</span><span class="sr-only">Info</span>');
       });
       if (desc.find('#ipa').text().trim().length !== 0) { // short version of IPA available in the panel
-        const klass = ($('.klass + .klass').length !== 0)?$('.klass + .klass'):$('.klass') // manage case when multiple .klass in a def
-        klass.prepend($(' <span class="ipa"> | ' + desc.find('#ipa').text() + ' | </span> ')) 
+        $('.adress.mentioun_adress').after(' <span class="ipa"> | ' + desc.find('#ipa').text() + ' | </span> ')
       }
 
       const invalidIds = ['ipa', 'op', 'zou', 'sprangop'] // remove duplicate ids
@@ -114,8 +122,27 @@ allArticles = allArticles.map(article => {
         desc.find('#'+id).addClass(id).removeAttr('id')
       })
 
+      // heading structure
       desc.find('.adress.mentioun_adress').attr('role', 'heading').attr('aria-level', '1')
+      has_s20 = (desc.find('.s20').toArray().length != 0)?1:0
+      titleWrapper(desc.find('.s20'), '2', $)
+      titleWrapper(desc.find('.tl_block'), (2+has_s20).toString(), $)
+      const has_info_gramm_tl_plus = (desc.find('.tl_block').toArray().length != 0)?1:0
+      titleWrapper(desc.find('.uds_block'),(2+has_s20+has_info_gramm_tl_plus).toString(), $) 
+      desc.find('.bspsintro').attr('role', 'heading').attr('aria-level', (3+has_s20+has_info_gramm_tl_plus).toString())
+      desc.find('.infobox').first().before('<h2 class="sr-only">Informatiounen</h2>')
+      desc.find('u').replaceWith(function() { return $(this).contents()})
 
+      // lists
+      $('.infobox:contains("Aussprooch")').each((i,e) => {
+        const elems = $(e).find('div').toArray().filter(f => {
+          return $(f).text().trim().match(/^•/)
+        })
+        $(elems).replaceWith(function() {
+          return '<li>'+$(this).html().replace("•","")+'</li>'
+        })
+        $('li').wrapAll('<ul>')
+      })
       desc = desc.html().replace(/&nbsp;/g, ' ') // FIXME: html entities are not accepted in the xml output.
 
       const title = (article['lod:article']['$text']) ? article['lod:article']['$text'] : article['lod:article']['lod:item-adresse']['$text']
@@ -132,6 +159,7 @@ allArticles = allArticles.map(article => {
         index: idx
       }
     } catch (e) {
+      console.log(e)
       console.log('not found: ' + id)
       articlesNotFound++
       return undefined;
