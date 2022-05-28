@@ -31,8 +31,8 @@ function normalizeArray(a) {
 
 function titleWrapper(t, level, $) {
   t.each((i,e) => {
-    const elems = $(e).children().toArray().filter(f => {
-        return f.tagName == 'span'
+    const elems = $(e).contents().toArray().filter(f => {
+        return f.nodeType == 3 || f.nodeType == 1 && f.tagName == 'span'
     })
     $(elems).wrapAll(`<h${level} />`)
   })
@@ -75,7 +75,6 @@ let articlesNotFound = 0
 
 // when debug is true, we generate only a few words
 const allowList = ['STOUSSEN1', 'ZWECK1', 'SINN1', 'RISEG1', 'FENNEF1', 'SEIER2', 'DOMAT1', 'ECH1', 'GEINT1', 'MEE2', 'ZWAR1', 'ENG1', 'DAJEE1', 'DAITSCHLAND1', 'REIMECH1', 'UELZECHT1', 'BEISPILL1']
-
 
 allArticles = allArticles.map(article => {
 
@@ -123,6 +122,7 @@ allArticles = allArticles.map(article => {
       })
 
       // heading structure
+      //const oldtxt = desc.text().replace(/\s/g,'')
       desc.find('.adress.mentioun_adress').attr('role', 'heading').attr('aria-level', '1')
       has_s20 = (desc.find('.s20').toArray().length != 0)?1:0
       titleWrapper(desc.find('.s20'), '2', $)
@@ -132,6 +132,11 @@ allArticles = allArticles.map(article => {
       desc.find('.bspsintro').attr('role', 'heading').attr('aria-level', (3+has_s20+has_info_gramm_tl_plus).toString())
       desc.find('.infobox').first().before('<h2 class="sr-only">Informatiounen</h2>')
       desc.find('u').replaceWith(function() { return $(this).contents()})
+      // const newtxt = desc.text().replace(/\s/g,'')
+      // if (oldtxt !== newtxt) {
+      //   console.error(oldtxt)
+      //   console.error(newtxt)
+      // }
 
       // lists
       $('.infobox:contains("Aussprooch")').each((i,e) => {
@@ -143,11 +148,15 @@ allArticles = allArticles.map(article => {
         })
         $('li').wrapAll('<ul>')
       })
+
       desc = desc.html().replace(/&nbsp;/g, ' ') // FIXME: html entities are not accepted in the xml output.
 
       const title = (article['lod:article']['$text']) ? article['lod:article']['$text'] : article['lod:article']['lod:item-adresse']['$text']
 
       let idx = index[id]
+      if (idx === undefined) {
+        idx = []
+      }
       if (!idx.includes(title)) {
         idx.push(title)
       }
