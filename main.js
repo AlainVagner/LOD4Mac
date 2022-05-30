@@ -34,7 +34,7 @@ function titleWrapper(t, level, $) {
     const elems = $(e).contents().toArray().filter(f => {
         return f.nodeType == 3 || f.nodeType == 1 && f.tagName == 'span'
     })
-    $(elems).wrapAll(`<h${level} />`)
+    $(elems).wrapAll(`<h${level} />`).wrapAll('<span role="text" />')
   })
 }
 

@@ -16,7 +16,7 @@ then
     source id.sh
 fi
 
-VERSION="0.2.0"
+VERSION="0.3.1"
 rm -rf ./package ./tmp
 mkdir -p ./package/Dictionaries
 mkdir ./tmp
