@@ -24,12 +24,11 @@ LOD4Mac-Installer-vX.Y.Z.pkg.
 ## Usage
 
 ### Short demo
-<a href="https://www.youtube.com/watch?v=Dv2Adi7qUmw"><img alt="Youtube Video: demo of LOD4Mac" src="https://user-images.githubusercontent.com/16536731/170982350-7d9d9c27-dfc6-4bdd-965a-3e996c6b4351.png"></a>
+<a href="https://www.youtube.com/watch?v=Dv2Adi7qUmw">Demo of LOD4Mac on Youtube</a>
 
 ### Get access to the definition of a word in most apps
 
 When in an application supporting it (ex: Safari, TextEdit, Notes, ...), to get the definition of a word, you can [force-click](https://support.apple.com/en-us/HT204352) on it if you have a trackpad or right-click then select "Look Up" in the menu. The first time you use this feature, you will need to configure it to display information coming from dictionaries.
-
 
 
 ### With Dictionary.app
