@@ -9,7 +9,8 @@ LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://
 
 ## Installation
 
-1. Download the latest installation package from the [release page](https://github.com/AlainVagner/LOD4Mac/releases).
+1. Download the latest installation package from the [release page](https://github.com/AlainVagner/LOD4Mac/releases). The name of the package looks like 
+LOD4Mac-Installer-vX.Y.Z.pkg.
 2. Install this package.
 
 ## Configuration 
