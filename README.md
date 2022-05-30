@@ -9,7 +9,8 @@ LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://
 
 ## Installation
 
-1. Download the latest installation package from the [release page](https://github.com/AlainVagner/LOD4Mac/releases).
+1. Download the latest installation package from the [release page](https://github.com/AlainVagner/LOD4Mac/releases). The name of the package looks like 
+LOD4Mac-Installer-vX.Y.Z.pkg.
 2. Install this package.
 
 ## Configuration 
@@ -22,11 +23,13 @@ LOD is the Luxembourgish Online Dictionary, it is available on [lod.lu](https://
 
 ## Usage
 
+### Short demo
+<a href="https://www.youtube.com/watch?v=Dv2Adi7qUmw">Demo of LOD4Mac on Youtube</a>
+
 ### Get access to the definition of a word in most apps
 
 When in an application supporting it (ex: Safari, TextEdit, Notes, ...), to get the definition of a word, you can [force-click](https://support.apple.com/en-us/HT204352) on it if you have a trackpad or right-click then select "Look Up" in the menu. The first time you use this feature, you will need to configure it to display information coming from dictionaries.
 
-https://user-images.githubusercontent.com/16536731/161426372-de15175c-85ac-4d01-b598-3aa7b7266778.mp4
 
 ### With Dictionary.app
 
