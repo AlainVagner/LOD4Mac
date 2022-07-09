@@ -81,8 +81,7 @@ allArticles = allArticles.map(article => {
   if (!debug || allowList.includes(article['lod:meta']['lod:id'])) {
     const id = article['lod:meta']['lod:id']
     console.log(id)
-    const audioLink = '<a class="audio" href="https://www.lod.lu/audio/' + id.toLowerCase() + '.mp3">lauschteren</a>'
-
+    const audioLink = '<a class="audio" href="https://lod.lu/uploads/AAC/' + id.toLowerCase() + '.m4a">lauschteren</a>'
 
     try { // manage the case where the definition has not been crawled
       const $ = cheerio.load(fs.readFileSync('./data/crawled/' + id + '.html'))
